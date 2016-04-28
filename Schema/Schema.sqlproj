@@ -108,25 +108,32 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="dbo\" />
-    <Folder Include="dbo\Tables\" />
+    <Folder Include="Tables" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\Schemata.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\SchemaArrays.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\SchemaReferences.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-  </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="Schema.refactorlog" />
+    <Build Include="Tables\Arrays.sql" />
+    <Build Include="Tables\DependencyItems.sql" />
+    <Build Include="Tables\EnumSchemaItems.sql" />
+    <Build Include="Tables\EnumSchemata.sql" />
+    <Build Include="Tables\ExecutionContexts.sql" />
+    <Build Include="Tables\Functions.sql" />
+    <Build Include="Tables\IntegerSchemata.sql" />
+    <Build Include="Tables\Metadata.sql" />
+    <Build Include="Tables\NumberSchemata.sql" />
+    <Build Include="Tables\Objects.sql" />
+    <Build Include="Tables\ObjectSchemata.sql" />
+    <Build Include="Tables\SchemaCollections.sql" />
+    <Build Include="Tables\SchemaInfo.sql" />
+    <Build Include="Tables\SchemaReferences.sql" />
+    <Build Include="Tables\Schemata.sql" />
+    <Build Include="Tables\Scopes.sql" />
+    <Build Include="Tables\SimpleTypeArrayItems.sql" />
+    <Build Include="Tables\SimpleTypeArrays.sql" />
+    <Build Include="Tables\StringArrayItems.sql" />
+    <Build Include="Tables\StringArrays.sql" />
+    <Build Include="Tables\StringSchemata.sql" />
+    <Build Include="Tables\Values.sql" />
+    <Build Include="Tables\Identifiers.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Schema.publish.xml" />
